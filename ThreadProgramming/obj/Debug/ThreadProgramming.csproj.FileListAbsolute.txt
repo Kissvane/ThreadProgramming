@@ -1,0 +1,7 @@
+C:\Users\Adrien\source\repos\ThreadProgramming\ThreadProgramming\bin\Debug\ThreadProgramming.exe.config
+C:\Users\Adrien\source\repos\ThreadProgramming\ThreadProgramming\bin\Debug\ThreadProgramming.exe
+C:\Users\Adrien\source\repos\ThreadProgramming\ThreadProgramming\bin\Debug\ThreadProgramming.pdb
+C:\Users\Adrien\source\repos\ThreadProgramming\ThreadProgramming\obj\Debug\ThreadProgramming.csprojAssemblyReference.cache
+C:\Users\Adrien\source\repos\ThreadProgramming\ThreadProgramming\obj\Debug\ThreadProgramming.csproj.CoreCompileInputs.cache
+C:\Users\Adrien\source\repos\ThreadProgramming\ThreadProgramming\obj\Debug\ThreadProgramming.exe
+C:\Users\Adrien\source\repos\ThreadProgramming\ThreadProgramming\obj\Debug\ThreadProgramming.pdb
