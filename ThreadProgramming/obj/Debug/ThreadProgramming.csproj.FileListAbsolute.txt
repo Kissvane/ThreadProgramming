@@ -5,3 +5,10 @@ C:\Users\Adrien\source\repos\ThreadProgramming\ThreadProgramming\obj\Debug\Threa
 C:\Users\Adrien\source\repos\ThreadProgramming\ThreadProgramming\obj\Debug\ThreadProgramming.csproj.CoreCompileInputs.cache
 C:\Users\Adrien\source\repos\ThreadProgramming\ThreadProgramming\obj\Debug\ThreadProgramming.exe
 C:\Users\Adrien\source\repos\ThreadProgramming\ThreadProgramming\obj\Debug\ThreadProgramming.pdb
+C:\Users\Utilisateur\Documents\Adrien\ThreadProgramming\ThreadProgramming\bin\Debug\ThreadProgramming.exe.config
+C:\Users\Utilisateur\Documents\Adrien\ThreadProgramming\ThreadProgramming\bin\Debug\ThreadProgramming.exe
+C:\Users\Utilisateur\Documents\Adrien\ThreadProgramming\ThreadProgramming\bin\Debug\ThreadProgramming.pdb
+C:\Users\Utilisateur\Documents\Adrien\ThreadProgramming\ThreadProgramming\obj\Debug\ThreadProgramming.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\Documents\Adrien\ThreadProgramming\ThreadProgramming\obj\Debug\ThreadProgramming.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\Documents\Adrien\ThreadProgramming\ThreadProgramming\obj\Debug\ThreadProgramming.exe
+C:\Users\Utilisateur\Documents\Adrien\ThreadProgramming\ThreadProgramming\obj\Debug\ThreadProgramming.pdb

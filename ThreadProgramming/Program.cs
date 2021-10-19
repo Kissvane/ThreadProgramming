@@ -17,8 +17,9 @@ namespace ThreadProgramming
 
         private static int Gold_3 = 0;
         private static int Bags_3 = 0;
-        private static int quotaBag = 10000;
+        //private static int quotaBag = 10000;
         static int workerNumber = 10000;
+        static int totalTargetBag = 100000000;
         private static Object _lock = new Object();
         private static List<Thread> pool = new List<Thread>();
         static Stopwatch stopwatch = new Stopwatch();
@@ -90,8 +91,8 @@ namespace ThreadProgramming
             mine1.Join();
             stopwatch.Stop();
             toWrite.Add("WORK IS OVER");
-            toWrite.Add("FINAL "+Bags_1+" bags / "+Gold_1+" gold");
-            toWrite.Add("Mine1 time : "+(stopwatch.ElapsedMilliseconds / 1000f));
+            toWrite.Add("FINAL " + Bags_1 + " bags / " + Gold_1 + " gold");
+            toWrite.Add("Mine1 time : " + (stopwatch.ElapsedMilliseconds / 1000f));
             stopwatch.Reset();
 
             WriteImportantInfos();
@@ -225,23 +226,28 @@ namespace ThreadProgramming
 
             int HarvestedGold = 0;
             int recoltedBag = 0;
-            while (recoltedBag < quotaBag)
+
+            lock (_lock)
             {
-                recoltedBag++;
-                HarvestedGold = r.Next(1, 5);
-                lock (_lock)
+                while (Bags_1 < totalTargetBag)
                 {
+                    recoltedBag++;
+                    HarvestedGold = r.Next(1, 5);
+
                     Gold_1 += HarvestedGold;
                     Bags_1 += 1;
                 }
             }
         }
 
-        static void SimpleMiner()
+        static public void SimpleMiner()
         {
             lock (_lock)
             {
-                Bags_1 += quotaBag;
+                while (Bags_1 < totalTargetBag)
+                {
+                    Bags_1++;
+                }
             }
         }
 
@@ -293,7 +299,7 @@ namespace ThreadProgramming
 
         static void Watcher2(object callback)
         {
-            while (Bags_2 < workerNumber * quotaBag)
+            while (Bags_2 < totalTargetBag)
             {
                 Thread.Sleep(1);
             }
@@ -305,16 +311,18 @@ namespace ThreadProgramming
 
             int HarvestedGold = 0;
             int recoltedBag = 0;
-            while (recoltedBag < quotaBag)
+            lock (_lock)
             {
-                recoltedBag++;
-                HarvestedGold = r.Next(1, 5);
-                lock (_lock)
+                while (Bags_2 < totalTargetBag)
                 {
+                    recoltedBag++;
+                    HarvestedGold = r.Next(1, 5);
+
                     Gold_2 += HarvestedGold;
                     Bags_2 += 1;
                 }
             }
+
 
             Container c = ((Container)callback);
             c.events[c.i].Set();
@@ -324,7 +332,11 @@ namespace ThreadProgramming
         {
             lock (_lock)
             {
-                Bags_2 += quotaBag;
+                while (Bags_2 < totalTargetBag)
+                {
+                    Bags_2 ++;
+                }
+                //Bags_2 += quotaBag;
             }
 
             Container c = ((Container)callback);
@@ -361,7 +373,7 @@ namespace ThreadProgramming
             int HarvestedGold = 0;
             int recoltedBag = 0;
 
-            while (recoltedBag < quotaBag)
+            while (Bags_3 < totalTargetBag)
             {
                 recoltedBag++;
                 HarvestedGold = r.Next(1, 5);
@@ -377,7 +389,10 @@ namespace ThreadProgramming
         {
             lock (_lock)
             {
-                Bags_3 += quotaBag;
+                while (Bags_3 < totalTargetBag)
+                {
+                    Bags_3++;
+                }
             }
         }
 
